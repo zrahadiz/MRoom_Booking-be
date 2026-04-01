@@ -92,6 +92,10 @@ python manage.py runserver
 - `POST /bookings/`
 - `DELETE /bookings/{id}/`
 
+## Check details of it on
+
+- MRoom Booking.postman_collection.json
+
 ---
 
 # ⚠️ Important Notes
