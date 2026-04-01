@@ -1,0 +1,22 @@
+# =========================
+# 🔐 ENV / SECRETS
+# =========================
+.env
+*.env
+
+# =========================
+# 🐍 PYTHON / DJANGO
+# =========================
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Django stuff
+*.log
+staticfiles/
+media/
