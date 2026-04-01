@@ -18,6 +18,12 @@ class RoomListCreateView(generics.ListCreateAPIView):
     search_fields = ['name']
     ordering_fields = ['capacity']
 
+class allRoomsView(APIView):
+    def get(self, request):
+        rooms = Room.objects.all()
+        serializer = RoomSerializer(rooms, many=True)
+        return Response(serializer.data)
+
 class AvailableRoomsView(APIView):
     def get(self, request):
         start = parse_datetime(request.GET.get('start_time'))

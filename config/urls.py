@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from rooms.views import RoomListCreateView, AvailableRoomsView, RoomAvailabilityView
+from rooms.views import RoomListCreateView, AvailableRoomsView, RoomAvailabilityView, allRoomsView
 from bookings.views import BookingListCreateView, BookingDeleteView, CheckBookingView
 
 urlpatterns = [
@@ -26,6 +26,7 @@ urlpatterns = [
     path('rooms/', RoomListCreateView.as_view()),
     path('rooms/available/', AvailableRoomsView.as_view()),
     path('rooms/<int:pk>/availability/', RoomAvailabilityView.as_view()),
+    path('rooms/all/', allRoomsView.as_view()),
 
     # Bookings
     path('bookings/', BookingListCreateView.as_view()),
